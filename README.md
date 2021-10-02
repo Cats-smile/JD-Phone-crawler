@@ -74,6 +74,8 @@ class JdSpiderMiddleware(object):
 
 # Pipeline.py
 
+将爬取到的数据存到mongodb中
+
 class JdPipeline(object):
     def __init__(self):
         self.client = pymongo.MongoClient('localhost', 27017)
