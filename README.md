@@ -81,7 +81,6 @@ class JdPipeline(object):
         self.client = pymongo.MongoClient('localhost', 27017)
         scrapy_db = self.client['jd']  # 创建数据库
         self.coll = scrapy_db['scrapyphone']  # 创建数据库中的表格
-
     def process_item(self, item, spider):
         self.coll.insert_one(dict(item))
         return item
