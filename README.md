@@ -76,7 +76,6 @@ class JdSpiderMiddleware(object):
 
 将爬取到的数据存到mongodb中
 
-class JdPipeline(object):
     def __init__(self):
         self.client = pymongo.MongoClient('localhost', 27017)
         scrapy_db = self.client['jd']  # 创建数据库
